@@ -93,7 +93,7 @@ navbar li{
 	padding: 10px;
 	font-size: 16px;
 	box-sizing: border-box;
-	border-radius: 7px;
+	border-radius: 5px;
 }
 
 .dropdownButton {
@@ -130,4 +130,9 @@ footer{
 	margin-top: 5px;
 	text-align: center;
 	font-size: 15px;
+}
+
+#sign-up-button{
+	padding-top: 30px;
+	color: green;
 }
