@@ -97,7 +97,7 @@ navbar li{
 }
 
 .dropdownButton {
-	padding-top: 5px;
+	padding-top: 10px;
   	position: relative;
   	display: inline-block;
 }
@@ -130,4 +130,9 @@ footer{
 	margin-top: 5px;
 	text-align: center;
 	font-size: 15px;
+}
+
+#sign-up-button{
+	padding-top: 30px;
+	color: green;
 }
