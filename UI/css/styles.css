@@ -5,7 +5,7 @@ body{
 	background-color:#c8dad3;
 	background-image: -webkit-linear-gradient(65deg, #A683E3 50%, #E4E9FD 50%);
 	min-height: 1000px;
-	overflow: hidden;
+	
 }
 
 img {
@@ -125,14 +125,26 @@ navbar li{
 	color: red;
 }
 
+
+#sign-up-button{
+	padding-top: 30px;
+	color: green;
+}
+
+#boxes{
+	margin-top: 30px;
+}
+
+#boxes .box{
+	float: left;
+	text-align: center;
+	width: 30%;
+	padding: 10px;
+}
+
 footer{
 	padding: 10px;
 	margin-top: 5px;
 	text-align: center;
 	font-size: 15px;
-}
-
-#sign-up-button{
-	padding-top: 30px;
-	color: green;
 }
