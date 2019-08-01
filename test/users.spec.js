@@ -8,3 +8,9 @@ describe("user can signup", () => {
 	})
 });
 
+describe("user can signin", () => {
+	it("should return user details", (done) => {
+		request(app).get('/signin');
+		.expect(302 done);
+	})
+});
