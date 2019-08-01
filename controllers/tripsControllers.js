@@ -32,6 +32,20 @@ exports.createTrip = (error, req, res) => {
 	}
 };
 
+exports.cancelSpecificTrip = (req, res, error) => {
+	if (error) {
+		res.status(400).JSON("There was an error cancelling the trip");
+	} else {
+		const tripId = req.params;
+		const result = allTrips.filter((trip) => {
+			if (trip.tripId === tripId) {
+				trip.tripOnStatus = false;
+			}
+		});
+		res.status(205).JSON(result);
+	}
+};
+
 console.log(allTrips);
 
 module.exports = allTrips;
