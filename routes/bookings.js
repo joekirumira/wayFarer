@@ -6,7 +6,7 @@ const router = express.Router();
 
 
 router.post('/', auth, booktrip);
-router.post('/allbookings', authAdmin, bookings);
-router.post('/mybookings', auth, myBookings);
+router.get('/allbookings', authAdmin, bookings);
+router.get('/mybookings', auth, myBookings);
 
 module.exports = router;
