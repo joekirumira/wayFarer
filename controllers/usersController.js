@@ -7,11 +7,7 @@ const users = [
 	},
 ];
 
-const addId = (arr) => {
-	return arr.map((obj, index) => {
-		return Object.assign({}, obj, { userId: index });
-	}
-};
+const addId = arr => arr.map((obj, index) => Object.assign({}, obj, { userId: index }));
 
 const userList = addId(users);
 
@@ -27,30 +23,27 @@ exports.signinUser = (req, res, next) => {
 	const signUpEmail = req.body.email;
 	const signUpPassword = req.body.password;
 	//	const data = JSON.parse(req.params);
-	const result = userList.filter(user => {
-		if (user.password === req.body.password && user.email ===req.body.email) {
+	const result = userList.filter((user) => {
+		if (user.password === req.body.password && user.email === req.body.email) {
 			const token = jwt.sign(
-			{
-				email: user.email,
-				firstname: user.firstname,
-				lastname: user.lastname,
-				admin: user.is_admin,
-				userId: user.userId
-			}, 
-			process.env.JWT_KEY, 
-			{
-				expiresIn: "1h"
-			} 
-				);
-			res.status(302).JSON({
+				{
+					email: user.email,
+					firstname: user.firstname,
+					lastname: user.lastname,
+					admin: user.is_admin,
+					userId: user.userId
+				},
+				process.env.JWT_KEY,
+				{
+					expiresIn: "1h"
+				}
+			);
+			return res.status(302).JSON({
 				message: "Authentication Success",
-				token: token
+				token
 			});
-			}
-
-		} else {
-			res.status(500).JSON(" Signin Error");
 		}
+		return res.status(500).JSON(" Signin Error");
 	});
 
 	res.status(302).JSON(result);

@@ -6,7 +6,7 @@ const bookings = [];
 const addId = (arr) => {
 	return arr.map((obj, index) => {
 		return Object.assign({}, obj, { bookingId: index });
-	}
+	});
 };
 
 const allBookings = addId(bookings);

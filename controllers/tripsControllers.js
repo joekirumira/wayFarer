@@ -14,7 +14,7 @@ const Trips = [{
 const addId = (arr) => {
 	return arr.map((obj, index) => {
 		return Object.assign({}, obj, { tripId: index });
-	}
+	});
 };
 
 const allTrips = addId(Trips);

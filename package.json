@@ -8,7 +8,7 @@
   },
   "scripts": {
     "start-watch": "nodemon index.js",
-    "test": "mocha || true"
+    "test": "mocha test/***spec.js"
   },
   "repository": {
     "type": "git",
