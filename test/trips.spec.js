@@ -8,9 +8,16 @@ describe("admin can cancel trip", () => {
 	})
 });
 
-describe("admin can cancel trip", () => {
-	it("admin should be able to cancle a trip", (done) => {
+describe("see all trips", () => {
+	it("admin and user can see all trips", (done) => {
 		request(app).get("/trips/");
-		.expect(201, done);		
+		.expect(302, done);		
+	})
+});
+
+describe("see specific trip", () => {
+	it("admin and user can see a specific trip", (done) => {
+		request(app).get("/trips/:tripId");
+		.expect(302, done);		
 	})
 });
