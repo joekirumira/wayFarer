@@ -1,0 +1,50 @@
+{
+  "name": "wayfarer",
+  "version": "1.0.0",
+  "description": "WayFarer is a public bus transportation booking service.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "start-watch": "nodemon index.js",
+    "test": "mocha || true"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joekirumira/wayFarer.git"
+  },
+  "keywords": [
+    "bus",
+    "booking",
+    "transport",
+    "fares",
+    "trip",
+    "booking",
+    "book",
+    "a",
+    "trip"
+  ],
+  "author": "Joseph Kasule",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joekirumira/wayFarer/issues"
+  },
+  "homepage": "https://github.com/joekirumira/wayFarer#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^5.3.0",
+    "eslint-config-airbnb": "^17.1.1",
+    "eslint-plugin-import": "^2.18.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.2",
+    "mocha": "^6.2.0",
+    "nodemon": "^1.19.1",
+    "supertest": "^4.0.2"
+  }
+}
