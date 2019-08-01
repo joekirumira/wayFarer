@@ -240,13 +240,13 @@
 			</div>
 			<div class="box">
 				<h3>Create a Trip</h2>
-				<form class="form-signin">
-					<input type="text" class="form-control" placeholder="Origin" required>
-					<input type="text" class="form-control" placeholder="Destination" required>
-					<input type="date" class="form-control" placeholder="Trip Date" required>
-					<input type="float" class="form-control" placeholder="Fare" required>
-					<input type="number" class="form-control" placeholder="Seating Capacity" required>
-					<input type="text" class="form-control" placeholder="Bus License Number" required>
+				<form action="/admin/createtrip" method="POST" class="form-signin">
+					<input type="text" class="form-control" name="tripOrigin" placeholder="Origin" required>
+					<input type="text" class="form-control" name="tripDestination" placeholder="Destination" required>
+					<input type="date" class="form-control" name="tripDate" placeholder="Trip Date" required>
+					<input type="float" class="form-control" name="tripFare" placeholder="Fare" required>
+					<input type="number" class="form-control" name="tripCapacity" placeholder="Seating Capacity" required>
+					<input type="text" class="form-control" name="tripBusNumber" placeholder="Bus License Number" required>
 					
 					<div id="sign-up-button">
 						<button class="button" type="submit">Create Trip</button>

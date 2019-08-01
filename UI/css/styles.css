@@ -122,6 +122,13 @@ navbar li{
   padding: 0 10px 0 10px;
 }
 
+.error {
+  background: orangered;
+  color: #fff;
+  padding: 5px;
+  margin: 5px;
+}
+
 #no-account-prompt{
   color: red;
 }
