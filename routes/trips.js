@@ -4,6 +4,8 @@ const { auth, authAdmin } = require('../helpers/validation');
 
 const router = express.Router();
 
+router.get('/:tripId', auth, getSpecificTrip);
+
 router.get('/', auth, getAllTrips);
 
 router.put('/:tripId/cancel', authAdmin, cancelSpecificTrip);
