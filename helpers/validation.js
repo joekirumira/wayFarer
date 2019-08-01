@@ -11,3 +11,32 @@ exports.auth = (req, res, next) => {
 		});
 	}
 };
+
+exports.authAdmin = (req, res, next) => {
+	try {
+		const decoded = jwt.verify(req.body.token, process.env.JWT_KEY);
+		admin = decoded.admin;
+		if (admin === true) {
+			res.status(200).JSON("Authentication Successful");
+		} else {
+			res.status(401).JSON("Authentication Failed");
+		};
+		
+		next();
+	} catch (error) {
+		return res.status(401).JSON({
+			message: "Authentication failed"
+		});
+	}
+};
+
+exports.validateLogin = (req, res, next) => {
+	const authorization = headers.authorization, decoded;
+	auth();
+	admin = decoded.admin;
+	if (admin === true) {
+		res.sendFile(path.join(__dirname, './UI/admin.html'));
+	} else {
+		res.sendFile(path.join(__dirname, './UI/user.html'));
+	};
+};
