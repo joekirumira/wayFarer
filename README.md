@@ -65,5 +65,5 @@ Users cannot view friends that booked the same trip.
 ### Testing
 To test run npm test or npm run test
 
-FAQs
+### FAQs
 For more details contact joekirumira3@gmail.com
